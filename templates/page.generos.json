@@ -1,0 +1,164 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "page-banner-template",
+      "disabled": true,
+      "settings": {
+        "wide_display": false,
+        "section_height": "small",
+        "image": "shopify://shop_images/CoreBlend.jpg",
+        "title": "",
+        "subtext": "",
+        "text_position": "center",
+        "overlay_opacity": 35,
+        "overlay_color": "#000000",
+        "overlay_text_color": "#ffffff",
+        "button_label": "",
+        "link": "",
+        "button_style": "primary",
+        "hide_page_title": true
+      }
+    },
+    "image_with_text_overlay_section_Jrtbh9": {
+      "type": "image-with-text-overlay-section",
+      "settings": {
+        "wide_display": false,
+        "section_height": "small",
+        "image": "shopify://shop_images/Banner.png",
+        "title": "{{ page.title }}",
+        "text": "<p>{{ page.content }}</p>",
+        "text_position": "center",
+        "overlay_opacity": 35,
+        "overlay_color": "#000000",
+        "overlay_text_color": "#ffffff",
+        "button_label": "",
+        "link": "",
+        "button_style": "primary"
+      }
+    },
+    "divider_HTNUnJ": {
+      "type": "divider",
+      "disabled": true,
+      "settings": {
+        "divider_spacing": 20,
+        "divider_border": false
+      }
+    },
+    "generos_YdxJCe": {
+      "type": "generos",
+      "blocks": {
+        "material_nYpMEg": {
+          "type": "material",
+          "settings": {
+            "material_nombre": "{{ metaobjects.generos[\"bio-cotton\"].nombre.value }}",
+            "material_descripcion": "{{ metaobjects.generos[\"bio-cotton\"].desc.value }}",
+            "material_composicion": "{{ metaobjects.generos[\"bio-cotton\"].composicion.value }}",
+            "material_utilizado_para": "{{ metaobjects.generos[\"bio-cotton\"].utilizadopara | metafield_text: field: 'actividad' }}",
+            "material_imagen": "{{ metaobjects.generos[\"bio-cotton\"].imagen.value }}",
+            "material_caracteristicas": "{{ metaobjects.generos[\"bio-cotton\"].caracteristicagenero | metafield_text: field: 'caracteristica' }}",
+            "material_link": "shopify://products/remera-jobs"
+          }
+        },
+        "material_Bk7Fcp": {
+          "type": "material",
+          "settings": {
+            "material_nombre": "{{ metaobjects.generos[\"core-blend\"].nombre.value }}",
+            "material_descripcion": "{{ metaobjects.generos[\"core-blend\"].desc.value }}",
+            "material_composicion": "{{ metaobjects.generos[\"core-blend\"].composicion.value }}",
+            "material_utilizado_para": "{{ metaobjects.generos[\"core-blend\"].utilizadopara | metafield_text: field: 'actividad' }}",
+            "material_imagen": "{{ metaobjects.generos[\"core-blend\"].imagen.value }}",
+            "material_caracteristicas": "{{ metaobjects.generos[\"core-blend\"].caracteristicagenero | metafield_text: field: 'caracteristica' }}",
+            "material_link": "shopify://products/remera-oversize-kobe"
+          }
+        },
+        "material_NNWkjf": {
+          "type": "material",
+          "settings": {
+            "material_nombre": "{{ metaobjects.generos[\"ultra-visc\"].nombre.value }}",
+            "material_descripcion": "{{ metaobjects.generos[\"ultra-visc\"].desc.value }}",
+            "material_composicion": "{{ metaobjects.generos[\"ultra-visc\"].composicion.value }}",
+            "material_utilizado_para": "{{ metaobjects.generos[\"ultra-visc\"].utilizadopara | metafield_text: field: 'actividad' }}",
+            "material_imagen": "{{ metaobjects.generos[\"ultra-visc\"].imagen.value }}",
+            "material_caracteristicas": "{{ metaobjects.generos[\"ultra-visc\"].caracteristicagenero | metafield_text: field: 'caracteristica' }}",
+            "material_link": "shopify://products/remera-musk"
+          }
+        },
+        "material_Xg3BBJ": {
+          "type": "material",
+          "settings": {
+            "material_nombre": "{{ metaobjects.generos[\"eco-rust\"].nombre.value }}",
+            "material_descripcion": "{{ metaobjects.generos[\"eco-rust\"].desc.value }}",
+            "material_composicion": "{{ metaobjects.generos[\"eco-rust\"].composicion.value }}",
+            "material_utilizado_para": "{{ metaobjects.generos[\"eco-rust\"].utilizadopara | metafield_text: field: 'actividad' }}",
+            "material_imagen": "{{ metaobjects.generos[\"eco-rust\"].imagen.value }}",
+            "material_caracteristicas": "{{ metaobjects.generos[\"eco-rust\"].caracteristicagenero | metafield_text: field: 'caracteristica' }}",
+            "material_link": "shopify://products/hoodie-smith"
+          }
+        },
+        "material_NpaAKh": {
+          "type": "material",
+          "settings": {
+            "material_nombre": "{{ metaobjects.generos[\"storm-fleece\"].nombre.value }}",
+            "material_descripcion": "{{ metaobjects.generos[\"storm-fleece\"].desc.value }}",
+            "material_composicion": "{{ metaobjects.generos[\"storm-fleece\"].composicion.value }}",
+            "material_utilizado_para": "{{ metaobjects.generos[\"storm-fleece\"].utilizadopara | metafield_text: field: 'actividad' }}",
+            "material_imagen": "{{ metaobjects.generos[\"storm-fleece\"].imagen.value }}",
+            "material_caracteristicas": "{{ metaobjects.generos[\"storm-fleece\"].caracteristicagenero | metafield_text: field: 'caracteristica' }}",
+            "material_link": ""
+          }
+        },
+        "material_gjAWdG": {
+          "type": "material",
+          "settings": {
+            "material_nombre": "{{ metaobjects.generos[\"ultra-flex\"].nombre.value }}",
+            "material_descripcion": "{{ metaobjects.generos[\"ultra-flex\"].desc.value }}",
+            "material_composicion": "{{ metaobjects.generos[\"ultra-flex\"].composicion.value }}",
+            "material_utilizado_para": "{{ metaobjects.generos[\"ultra-flex\"].utilizadopara | metafield_text: field: 'actividad' }}",
+            "material_imagen": "{{ metaobjects.generos[\"ultra-flex\"].imagen.value }}",
+            "material_caracteristicas": "{{ metaobjects.generos[\"ultra-flex\"].caracteristicagenero | metafield_text: field: 'caracteristica' }}",
+            "material_link": "shopify://products/short-bryant"
+          }
+        },
+        "material_NBpJBy": {
+          "type": "material",
+          "settings": {
+            "material_nombre": "{{ metaobjects.generos[\"black-stride\"].nombre.value }}",
+            "material_descripcion": "{{ metaobjects.generos[\"black-stride\"].desc.value }}",
+            "material_composicion": "{{ metaobjects.generos[\"black-stride\"].composicion.value }}",
+            "material_utilizado_para": "{{ metaobjects.generos[\"black-stride\"].utilizadopara | metafield_text: field: 'actividad' }}",
+            "material_imagen": "{{ metaobjects.generos[\"black-stride\"].imagen.value }}",
+            "material_caracteristicas": "{{ metaobjects.generos[\"black-stride\"].caracteristicagenero | metafield_text: field: 'caracteristica' }}",
+            "material_link": "shopify://products/short-tesla"
+          }
+        }
+      },
+      "block_order": [
+        "material_nYpMEg",
+        "material_Bk7Fcp",
+        "material_NNWkjf",
+        "material_Xg3BBJ",
+        "material_NpaAKh",
+        "material_gjAWdG",
+        "material_NBpJBy"
+      ],
+      "settings": {
+        "titulo": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "image_with_text_overlay_section_Jrtbh9",
+    "divider_HTNUnJ",
+    "generos_YdxJCe"
+  ]
+}

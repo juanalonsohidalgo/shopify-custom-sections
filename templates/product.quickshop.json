@@ -1,0 +1,58 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "wrapper": "div.shopify-section--product-quickshop-template.modal--quickshop",
+  "sections": {
+    "main": {
+      "type": "quickshop",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+            "description_words": "30"
+          }
+        },
+        "form": {
+          "type": "form",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "title",
+        "price",
+        "description",
+        "form"
+      ],
+      "settings": {
+        "enable_thumbnails": "desktop",
+        "gallery_arrows": false,
+        "activate_zoom": true,
+        "slideshow_speed": 6,
+        "slideshow_transition": "fade",
+        "thumbnail_position": "bottom-thumbnails",
+        "crop_thumbnails": false,
+        "enable_thumbnail_slider": true,
+        "show_payment_button": true,
+        "video_looping": false
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

@@ -1,0 +1,176 @@
+{% comment %}
+  Sección personalizada para mostrar géneros en plantillas de metaobjetos.
+  Incluye: Nombre, Descripción, Características (lista dinámica) e Imagen.
+{% endcomment %}
+
+<style>
+  .metaobject-generos {
+    padding: 40px 0;
+    background-color: {{ section.settings.background_color }};
+  }
+
+  .metaobject-generos__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .metaobject-generos__content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .metaobject-generos__title {
+    font-size: 32px;
+    font-weight: bold;
+    color: {{ section.settings.text_color }};
+    margin: 0;
+  }
+
+  .metaobject-generos__description {
+    font-size: 18px;
+    color: {{ section.settings.text_color }};
+    margin: 0;
+  }
+
+  .metaobject-generos__features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .metaobject-generos__features li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+    color: {{ section.settings.text_color }};
+  }
+
+  .metaobject-generos__image-container {
+    width: 500px;
+    height: 500px;
+    overflow: hidden;
+    border-radius: 12px;
+  }
+
+  .metaobject-generos__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  @media (min-width: 768px) {
+    .metaobject-generos__container {
+      flex-direction: row;
+      text-align: left;
+    }
+
+    .metaobject-generos__content {
+      flex: 1;
+      text-align: left;
+    }
+
+    .metaobject-generos__features {
+      justify-content: flex-start;
+    }
+  }
+</style>
+
+<div class="metaobject-generos">
+  <div class="metaobject-generos__container">
+    <div class="metaobject-generos__content">
+      <h2 class="metaobject-generos__title">{{ section.settings.title }}</h2>
+      <p class="metaobject-generos__description">
+        {{ section.settings.description | replace: '\n', '<br>' }}
+      </p>
+      <ul class="metaobject-generos__features">
+        {% assign features = section.settings.features | split: ' y ' %}
+        {% for feature in features %}
+          {% assign items = feature | split: ' ' %}
+          {% for item in items %}
+            {% if item != blank %}
+              <li>{{ item | strip }}</li>
+            {% endif %}
+          {% endfor %}
+        {% endfor %}
+      </ul>
+    </div>
+    {% if section.settings.image %}
+      <div class="metaobject-generos__image-container">
+        <img
+          src="{{ section.settings.image | img_url: '400x400', crop: 'center' }}"
+          alt="{{ section.settings.image.alt | default: 'Imagen del género' }}"
+          class="metaobject-generos__image"
+          loading="lazy"
+        >
+      </div>
+    {% endif %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Metaobject Géneros",
+  "class": "shopify-section--metaobject-generos",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Título",
+      "default": "Nombre del Género"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Descripción",
+      "default": "Descripción breve del género y sus beneficios."
+    },
+    {
+      "type": "text",
+      "id": "features",
+      "label": "Características",
+      "default": "🌿 EcoFuture ☁️ SuperSoft 🌬️ Breathable y ⏳ LongLife",
+      "info": "Conecta este campo a una fuente dinámica."
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Imagen"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Color de fondo",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Color del texto",
+      "default": "#000000"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Metaobject Géneros",
+      "category": "Custom"
+    }
+  ],
+  "enabled_on": {
+    "templates": [
+      "metaobject"
+    ]
+  }
+}
+{% endschema %}

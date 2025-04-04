@@ -1,0 +1,26 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "metaobject_generos_yWXCTk": {
+      "type": "metaobject-generos",
+      "settings": {
+        "title": "metaobject.nombre.value",
+        "description": "metaobject.desc.value",
+        "features": "metaobject.caracteristicagenero",
+        "background_color": "#FFFFFF",
+        "text_color": "#000000"
+      }
+    }
+  },
+  "order": [
+    "metaobject_generos_yWXCTk"
+  ]
+}

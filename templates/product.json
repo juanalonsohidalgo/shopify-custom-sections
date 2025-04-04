@@ -1,0 +1,116 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "wrapper": "div.shopify-section--product-template",
+  "sections": {
+    "sidebar": {
+      "type": "product-sidebar",
+      "blocks": {
+        "menu": {
+          "type": "menu",
+          "disabled": true,
+          "settings": {
+            "custom_menu_linklist": ""
+          }
+        },
+        "text": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "title": "Heading",
+            "text": "<p>Text area can be used for special announcements or general information.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "menu",
+        "text"
+      ],
+      "disabled": true,
+      "settings": {
+        "toggle": false
+      }
+    },
+    "main": {
+      "type": "product-template",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "rating": {
+          "type": "rating",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "grouping": {
+          "type": "product_grouping_picker",
+          "settings": {
+            "heading": "Selecciona tu opción",
+            "picker_type": "button",
+            "grouping_label": "Color",
+            "option_type_metafield_key": "product_grouping_option_1",
+            "option_value_metafield_key": "product_grouping_option_1_value"
+          }
+        },
+        "form": {
+          "type": "form",
+          "settings": {}
+        },
+        "description": {
+          "type": "description",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "title",
+        "rating",
+        "price",
+        "grouping",
+        "form",
+        "description"
+      ],
+      "settings": {
+        "enable_thumbnails": "always",
+        "gallery_arrows": false,
+        "enable_product_lightbox": true,
+        "activate_zoom": false,
+        "slideshow_speed": 0,
+        "slideshow_transition": "slide",
+        "thumbnail_position": "bottom-thumbnails",
+        "crop_thumbnails": true,
+        "enable_thumbnail_slider": true,
+        "show_payment_button": true,
+        "product_images_position": "left",
+        "set_product_height": true,
+        "product_height": 600,
+        "video_looping": false
+      }
+    },
+    "recommendations": {
+      "type": "product-recommendations",
+      "settings": {
+        "show_product_recommendations": true,
+        "product_recommendations_layout": "grid",
+        "product_recommendations_heading": "Productos que pueden interesarte",
+        "products_per_row": 4,
+        "recommended_products_limit": 4
+      }
+    }
+  },
+  "order": [
+    "sidebar",
+    "main",
+    "recommendations"
+  ]
+}

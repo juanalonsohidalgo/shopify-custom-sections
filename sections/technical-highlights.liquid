@@ -1,0 +1,177 @@
+{{ 'section-technical-highlights.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .technical-highlights__collapse-all {
+    display: none;
+    position: absolute;
+    bottom: -2rem;
+    right: 1rem;
+    align-items: center;
+    gap: 0.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 0.875rem;
+    color: rgb(var(--color-foreground));
+    text-decoration: underline;
+    padding: 0.5rem;
+  }
+
+  .technical-highlights__collapse-all.visible {
+    display: flex;
+  }
+
+  .technical-highlights__collapse-all svg {
+    width: 12px;
+    height: 12px;
+  }
+
+  .technical-highlights {
+    position: relative;
+    padding-bottom: 3rem;
+  }
+{%- endstyle -%}
+
+<div class="technical-highlights">
+  <h2 class="technical-highlights__title">{{ section.settings.title }}</h2>
+
+  <div class="technical-highlights__grid">
+    {% for block in section.blocks %}
+      <div class="technical-highlights__item" {{ block.shopify_attributes }}>
+        <div class="technical-highlights__icon">
+          {%- if block.settings.icon != blank -%}
+            {{ block.settings.icon | image_url: width: 120 | image_tag:
+              loading: 'lazy',
+              width: 60,
+              height: 60
+            }}
+          {%- endif -%}
+        </div>
+        <div class="technical-highlights__content">
+          <h3 class="technical-highlights__item-title">{{ block.settings.title }}</h3>
+          <p class="technical-highlights__description">{{ block.settings.description }}</p>
+          <button type="button" class="technical-highlights__read-more">Leer más</button>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+
+  <button type="button" class="technical-highlights__collapse-all">
+    Ver menos
+    <svg viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M6 2L11 7L10.3 7.7L6 3.4L1.7 7.7L1 7L6 2Z" fill="currentColor"/>
+    </svg>
+  </button>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const descriptions = document.querySelectorAll('.technical-highlights__description');
+    const allItems = document.querySelectorAll('.technical-highlights__item');
+    const allButtons = document.querySelectorAll('.technical-highlights__read-more');
+    const collapseButton = document.querySelector('.technical-highlights__collapse-all');
+    let isExpanded = false;
+    
+    descriptions.forEach(description => {
+      if (description.scrollHeight > description.clientHeight) {
+        description.classList.add('truncated');
+      }
+    });
+
+    function toggleExpansion(expanded) {
+      isExpanded = expanded;
+      
+      allItems.forEach(item => {
+        if (isExpanded) {
+          item.classList.add('expanded');
+        } else {
+          item.classList.remove('expanded');
+        }
+      });
+
+      allButtons.forEach(btn => {
+        btn.style.display = isExpanded ? 'none' : '';
+      });
+
+      collapseButton.classList.toggle('visible', isExpanded);
+    }
+
+    allButtons.forEach(button => {
+      button.addEventListener('click', function() {
+        toggleExpansion(true);
+      });
+    });
+
+    collapseButton.addEventListener('click', function() {
+      toggleExpansion(false);
+    });
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Technical Highlights",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Section Title",
+      "default": "TECHNICAL HIGHLIGHTS"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "highlight",
+      "name": "Technical Highlight",
+      "limit": 3,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Icon"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Feature Title"
+        },
+        {
+          "type": "text",
+          "id": "description",
+          "label": "Description",
+          "default": "Feature description goes here"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Technical Highlights",
+      "blocks": [
+        {
+          "type": "highlight",
+          "settings": {
+            "title": "DESIGNED FOR TRAINING",
+            "description": "Built with the intention of gym training, lifting, HIIT, hybrid training, and cardio."
+          }
+        },
+        {
+          "type": "highlight",
+          "settings": {
+            "title": "SLIM FIT",
+            "description": "This product has an athletic, close-to-body fit, allowing total freedom of movement."
+          }
+        },
+        {
+          "type": "highlight",
+          "settings": {
+            "title": "AEROSILVER® FABRICATION",
+            "description": "Our advanced silver-infused yarn integrated into Nano-Mesh for antimicrobial, sweat-wicking performance, enhanced with superior fiber strength for durability and comfort."
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %} 

@@ -1,0 +1,38 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "blog-template",
+      "settings": {
+        "wide_display": true,
+        "section_height": "small",
+        "title": "",
+        "subtext": "",
+        "text_position": "center",
+        "overlay_opacity": 0,
+        "overlay_color": "#000000",
+        "overlay_text_color": "#ffffff",
+        "blog_posts_per_row": 3,
+        "blog_posts_per_page": 12,
+        "blog_tags": false,
+        "blog_author": false,
+        "blog_date": true,
+        "blog_comment_count": true,
+        "read_more_link": false,
+        "toggle": false,
+        "sidebar_mobile_position": "below"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

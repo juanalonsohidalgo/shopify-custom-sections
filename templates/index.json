@@ -1,0 +1,496 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "video_qxM8EN": {
+      "type": "video",
+      "disabled": true,
+      "settings": {
+        "wide_display": true,
+        "aspect_ratio": "16:9",
+        "autoplay": false,
+        "autoloop": false,
+        "mute_video": false,
+        "video_dark_overlay": false,
+        "video": "",
+        "html5_video": "",
+        "image": "shopify://shop_images/Header_Slide_Focus_1.jpg",
+        "display_text_over_video": false,
+        "heading": "#STAYFOCUSED",
+        "subtext": "Indumentaria deportiva",
+        "text_position": "center",
+        "enable_text_shadow": true,
+        "overlay_opacity": 35,
+        "overlay_color": "#000000",
+        "overlay_text_color": "#ffffff",
+        "button_label": "VER COLECCION",
+        "link": "shopify://collections/coleccion",
+        "hide_play_button": true
+      }
+    },
+    "e478dd39-bf4e-4964-98d9-b114a2da47b3": {
+      "type": "slideshow",
+      "blocks": {
+        "template--15852772819139__e478dd39-bf4e-4964-98d9-b114a2da47b3-slide-1": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Header_Slide_Focus_1.jpg",
+            "title": "#Stayfocused",
+            "subtext": "Ropa para entrenar",
+            "text_position": "center",
+            "overlay_opacity": 35,
+            "overlay_color": "#000000",
+            "overlay_text_color": "#ffffff",
+            "link": "shopify://collections/coleccion",
+            "button_label": "Ver colección",
+            "button_link": "",
+            "button_style": "primary"
+          }
+        },
+        "template--15852772819139__e478dd39-bf4e-4964-98d9-b114a2da47b3-slide-2": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Header_Slider_Focus_2.jpg",
+            "title": "Lifestyle",
+            "subtext": "y para vivir tu vida",
+            "text_position": "center",
+            "overlay_opacity": 35,
+            "overlay_color": "#000000",
+            "overlay_text_color": "#ffffff",
+            "link": "shopify://collections/coleccion",
+            "button_label": "Ver colección",
+            "button_link": "shopify://collections/coleccion",
+            "button_style": "primary"
+          }
+        }
+      },
+      "block_order": [
+        "template--15852772819139__e478dd39-bf4e-4964-98d9-b114a2da47b3-slide-1",
+        "template--15852772819139__e478dd39-bf4e-4964-98d9-b114a2da47b3-slide-2"
+      ],
+      "settings": {
+        "wide_display": true,
+        "slideshow_height": "full",
+        "slideshow_mobile_height": "full",
+        "navigation_style": "dots",
+        "slideshow_animation": "fade",
+        "slideshow_speed": 8
+      }
+    },
+    "dea1b5a8-4971-4c6a-82dc-5844e7a9e0d7": {
+      "type": "countdown-timer",
+      "settings": {
+        "full_width": true,
+        "section_height": "small",
+        "image": "shopify://shop_images/a-hand-removes-a-sweater-from-a-clothing-rack.jpg",
+        "countdown_year": "2025",
+        "countdown_month": "04",
+        "countdown_day": "22",
+        "countdown_hour": "12",
+        "countdown_minute": "30",
+        "countdown_timer_background": true,
+        "countdown_timer_complete": true,
+        "countdown_timer_message": "",
+        "product": "",
+        "title": "¡Pagá dos llevate tres!",
+        "text": "<p>Por tiempo limitado 3 x 2 en todas las remeras de la tienda!</p>",
+        "button_link": "shopify://collections/remeras",
+        "button_label": "ver mas",
+        "button_style": "primary",
+        "text_color": "#ffffff",
+        "overlay_color": "#000000",
+        "overlay_opacity": 15,
+        "product_card_background_color": "#f4f4f4"
+      }
+    },
+    "featured-promotions-1": {
+      "type": "featured-promotions",
+      "blocks": {
+        "block-1": {
+          "type": "promotion",
+          "settings": {
+            "image": "shopify://shop_images/Focus_Coleccion_Entrenamiento_2.png",
+            "title": "GYM Clothes",
+            "content": "<p>Para Entrenar</p>",
+            "overlay": "solid",
+            "show_background": false,
+            "background_link": "shopify://collections/focus-training",
+            "button_text": "Shop now",
+            "link": "",
+            "button_style": "tertiary",
+            "button_text2": "",
+            "link2": "",
+            "button_style2": "tertiary",
+            "position": "center",
+            "alignment": "center"
+          }
+        },
+        "block-2": {
+          "type": "promotion",
+          "settings": {
+            "image": "shopify://shop_images/Focus_Headstand.png",
+            "title": "Sportswear",
+            "content": "<p>Para moverte</p>",
+            "overlay": "solid",
+            "show_background": false,
+            "background_link": "shopify://products/short-tesla",
+            "button_text": "Shop now",
+            "link": "",
+            "button_style": "secondary",
+            "button_text2": "",
+            "link2": "",
+            "button_style2": "tertiary",
+            "position": "center",
+            "alignment": "center"
+          }
+        },
+        "block-3": {
+          "type": "promotion",
+          "settings": {
+            "image": "shopify://shop_images/Focus_Coleccion_Tops_1.jpg",
+            "title": "ACTIVEWEAR",
+            "content": "<p>Para todos los dias</p>",
+            "overlay": "solid",
+            "show_background": false,
+            "background_link": "shopify://collections/remeras",
+            "button_text": "Shop now",
+            "link": "",
+            "button_style": "tertiary",
+            "button_text2": "",
+            "link2": "",
+            "button_style2": "tertiary",
+            "position": "center",
+            "alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "block-1",
+        "block-2",
+        "block-3"
+      ],
+      "settings": {
+        "features_per_row": 3
+      }
+    },
+    "featured-text-1": {
+      "type": "featured-text",
+      "settings": {
+        "wide_display": true,
+        "title": "BE THE CHANGE YOU WANT TO SEE",
+        "content": "<p><em>El </em><em><strong>cambio </strong></em><em>sos vos, empieza y termina en vos. Nosotros solo queremos acompañarte para que no pierdas el </em><em><strong>foco</strong></em><em>.</em></p>",
+        "text_size": "featured_text",
+        "text_alignment": "center",
+        "button_label": "",
+        "button_link": "",
+        "background_color": "{{ shop.brand.colors.secondary[0].foreground }}"
+      }
+    },
+    "gallery-1": {
+      "type": "gallery",
+      "blocks": {
+        "block-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/manny-moreno-UG9AWY8Zo_0-unsplash.jpg"
+          }
+        },
+        "block-2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Focus_coleccion_Black_1.png"
+          }
+        },
+        "0c4ce052-46e8-4cec-a907-1420877cc6f1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/2020-07-12_01.01.27-Edit.png"
+          }
+        },
+        "e55dc7fb-622d-46e8-a5c5-dfee9b9835d3": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Focus_Coleccion_Bottoms_1.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "block-1",
+        "block-2",
+        "0c4ce052-46e8-4cec-a907-1420877cc6f1",
+        "e55dc7fb-622d-46e8-a5c5-dfee9b9835d3"
+      ],
+      "settings": {
+        "title": "",
+        "gallery_type": "grid",
+        "images_per_row": 4,
+        "wide_display": true
+      }
+    },
+    "featured-collection-1": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "{{ section.settings.frontpage_collection.title }}",
+        "layout_type": "slideshow",
+        "frontpage_collection": "black",
+        "products_per_row": 4,
+        "products_limit": 6,
+        "view_all": false,
+        "toggle": false
+      }
+    },
+    "divider-1": {
+      "type": "divider",
+      "settings": {
+        "divider_spacing": 0,
+        "divider_border": false
+      }
+    },
+    "slideshow-1": {
+      "type": "slideshow",
+      "blocks": {
+        "block-1": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/IMG_0732.jpeg",
+            "title": "Ignorá el ruido",
+            "subtext": "",
+            "text_position": "center",
+            "overlay_opacity": 25,
+            "overlay_color": "#000000",
+            "overlay_text_color": "#ffffff",
+            "link": "shopify://collections/focus-training",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "primary"
+          }
+        },
+        "da562f27-536b-45ae-a94d-edd8b1d16250": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Focus_banner2_running_1.jpg",
+            "title": "Y andá por lo que importa",
+            "subtext": "",
+            "text_position": "center",
+            "overlay_opacity": 35,
+            "overlay_color": "#000000",
+            "overlay_text_color": "#ffffff",
+            "link": "shopify://collections/coleccion",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "primary"
+          }
+        }
+      },
+      "block_order": [
+        "block-1",
+        "da562f27-536b-45ae-a94d-edd8b1d16250"
+      ],
+      "settings": {
+        "wide_display": true,
+        "slideshow_height": "large",
+        "slideshow_mobile_height": "medium",
+        "navigation_style": "dots",
+        "slideshow_animation": "fade",
+        "slideshow_speed": 6
+      }
+    },
+    "divider-2": {
+      "type": "divider",
+      "settings": {
+        "divider_spacing": 0,
+        "divider_border": false
+      }
+    },
+    "testimonial-1": {
+      "type": "testimonial",
+      "blocks": {
+        "block-1": {
+          "type": "quote",
+          "settings": {
+            "star_rating": "5",
+            "testimonial": "<p>Le compré ropa a mi hijo y le quedó perfecto! Los talles geniales, y la calidad excelente. Voy a volver</p><p>Soledad M.</p>",
+            "name": "",
+            "info": ""
+          }
+        },
+        "block-2": {
+          "type": "quote",
+          "settings": {
+            "star_rating": "5",
+            "testimonial": "<p>Tenia dudas con el talle y me super ayudaron! Muy copados y la ropa me quedo perfecta! un 10!</p>",
+            "name": "Tomas Lescano",
+            "info": ""
+          }
+        },
+        "block-3": {
+          "type": "quote",
+          "settings": {
+            "star_rating": "5",
+            "testimonial": "<p>Re buena onda los chicos y geniales las remeras! Super recomiendo!</p>",
+            "name": "Sebastian Gimenez",
+            "info": ""
+          }
+        }
+      },
+      "block_order": [
+        "block-1",
+        "block-2",
+        "block-3"
+      ],
+      "settings": {
+        "title": "",
+        "image_crop": "original",
+        "desktop_navigation_style": "buttons"
+      }
+    },
+    "1742324045c25fd406": {
+      "type": "apps",
+      "blocks": {
+        "vitals_insta_feed_yCJRAd": {
+          "type": "shopify://apps/vitals/blocks/insta-feed/aeb48102-2a5a-4f39-bdbd-d8d49f4e20b8",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "vitals_insta_feed_yCJRAd"
+      ],
+      "settings": {}
+    },
+    "1695407337e57e8db1": {
+      "type": "apps",
+      "disabled": true,
+      "settings": {}
+    },
+    "featured-product-1": {
+      "type": "featured-product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "description": {
+          "type": "description",
+          "disabled": true,
+          "settings": {}
+        },
+        "form": {
+          "type": "form",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "title",
+        "price",
+        "description",
+        "form"
+      ],
+      "settings": {
+        "title": "Producto destacado",
+        "featured_product": "focus-cap",
+        "enable_thumbnails": "disabled",
+        "gallery_arrows": false,
+        "enable_product_lightbox": true,
+        "activate_zoom": false,
+        "slideshow_speed": 6,
+        "slideshow_transition": "slide",
+        "thumbnail_position": "bottom-thumbnails",
+        "crop_thumbnails": true,
+        "enable_thumbnail_slider": true,
+        "show_payment_button": true,
+        "product_images_position": "right",
+        "set_product_height": true,
+        "product_height": 400,
+        "video_looping": false
+      }
+    },
+    "image-text-1": {
+      "type": "image-text",
+      "settings": {
+        "wide_display": true,
+        "image": "shopify://shop_images/compromiso_Fundacion_masHumanidad.jpg",
+        "image_position": "right",
+        "desktop_image_height": "original",
+        "mobile_image_height": "original",
+        "title": "Nuestro compromiso",
+        "text": "<p>Comprando cualquier item acá estás ayudando a otros! Por cada ítem estás donando alimentos para familias que lo necesitan!</p>",
+        "text_align": "left",
+        "button_label": "Aprende mas",
+        "link": "shopify://pages/compromiso",
+        "text_color": "#000000",
+        "background_color": "#fafafa"
+      }
+    },
+    "newsletter-1": {
+      "type": "newsletter",
+      "settings": {
+        "wide_display": true,
+        "title": "Newsletter",
+        "subheading": "¡Sumate para recibir un código de descuento del 20% para tu compra!",
+        "newsletter_richtext": "",
+        "display_first_name": false,
+        "display_last_name": false,
+        "text_align": "center",
+        "newsletter_background": "#ffffff",
+        "newsletter_text": "#303030"
+      }
+    },
+    "blog-post-1": {
+      "type": "blog-posts",
+      "disabled": true,
+      "settings": {
+        "title": "",
+        "blog_widget_select": "stayfocused",
+        "article_count": "2",
+        "blog_tags": false,
+        "blog_author": false,
+        "blog_date": false,
+        "blog_comment_count": false,
+        "read_more_link": true
+      }
+    },
+    "divider-4": {
+      "type": "divider",
+      "settings": {
+        "divider_spacing": 0,
+        "divider_border": false
+      }
+    },
+    "1695407350bb79ad9f": {
+      "type": "apps",
+      "settings": {}
+    }
+  },
+  "order": [
+    "video_qxM8EN",
+    "e478dd39-bf4e-4964-98d9-b114a2da47b3",
+    "dea1b5a8-4971-4c6a-82dc-5844e7a9e0d7",
+    "featured-promotions-1",
+    "featured-text-1",
+    "gallery-1",
+    "featured-collection-1",
+    "divider-1",
+    "slideshow-1",
+    "divider-2",
+    "testimonial-1",
+    "1742324045c25fd406",
+    "1695407337e57e8db1",
+    "featured-product-1",
+    "image-text-1",
+    "newsletter-1",
+    "blog-post-1",
+    "divider-4",
+    "1695407350bb79ad9f"
+  ]
+}

@@ -1,0 +1,92 @@
+.product-form__input {
+  margin-bottom: 1rem;
+}
+
+.product-form__input fieldset {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  border: none;
+  padding: 0;
+}
+
+.product-form__input input[type='radio'] {
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+  position: absolute;
+  height: 1px;
+  width: 1px;
+}
+
+.product-form__input input[type='radio'] + label {
+  border: var(--variant-pills-border-width) solid rgba(var(--color-foreground), 0.1);
+  color: rgb(var(--color-foreground));
+  cursor: pointer;
+  display: inline-block;
+  padding: 1rem 2rem;
+  transition: border var(--duration-short) ease;
+}
+
+.product-form__input input[type='radio'] + label:hover {
+  border: var(--variant-pills-border-width) solid rgb(var(--color-foreground));
+}
+
+.product-form__input input[type='radio']:checked + label {
+  background-color: rgb(var(--color-foreground));
+  color: rgb(var(--color-background));
+}
+
+.product-form__input input[type='radio']:disabled + label {
+  border-color: rgba(var(--color-foreground), 0.1);
+  color: rgba(var(--color-foreground), 0.4);
+  cursor: not-allowed;
+}
+
+.product-form__input input[type='radio']:disabled + label:hover {
+  border-color: rgba(var(--color-foreground), 0.1);
+}
+
+.product-form__sold-out {
+  color: rgba(var(--color-foreground), 0.7);
+  white-space: nowrap;
+}
+
+.form__label {
+  display: block;
+  margin-bottom: 0.6rem;
+}
+
+.icon-caret {
+  width: 10px;
+  height: 6px;
+  margin-left: 5px;
+  pointer-events: none;
+}
+
+.select {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.select .icon-caret {
+  position: absolute;
+  right: 10px;
+  pointer-events: none;
+}
+
+.select__select {
+  width: 100%;
+  padding: 8px 30px 8px 10px;
+  appearance: none;
+  background-color: rgb(var(--color-background));
+  color: rgb(var(--color-foreground));
+  border: 1px solid rgba(var(--color-foreground), 0.1);
+  border-radius: 0;
+  cursor: pointer;
+  height: 4rem;
+  line-height: 1.4;
+  margin: 0;
+  font-size: 1.4rem;
+  letter-spacing: 0.05rem;
+} 

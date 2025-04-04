@@ -1,0 +1,20 @@
+.selector-wrapper select,
+.product-form__input,
+.quantity-wrapper,
+.quantity-button,
+.product-form__submit {
+  border-radius: 0 !important;
+}
+
+.product-form__item--quantity .quantity-wrapper {
+  border-radius: 0;
+}
+
+.product-form__item--quantity .quantity-wrapper input,
+.product-form__item--quantity .quantity-wrapper button {
+  border-radius: 0;
+}
+
+.product-form__controls-group select {
+  border-radius: 0;
+} 

@@ -1,0 +1,451 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "wrapper": "div.shopify-section--product-template",
+  "sections": {
+    "sidebar": {
+      "type": "product-sidebar",
+      "blocks": {
+        "menu": {
+          "type": "menu",
+          "disabled": true,
+          "settings": {
+            "custom_menu_linklist": ""
+          }
+        },
+        "text": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "title": "Heading",
+            "text": "<p>Text area can be used for special announcements or general information.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "menu",
+        "text"
+      ],
+      "disabled": true,
+      "settings": {
+        "toggle": false
+      }
+    },
+    "main": {
+      "type": "product-template",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {
+            "display_collection_link": false
+          }
+        },
+        "vitals_reviews_stars_LkNeDX": {
+          "type": "shopify://apps/vitals/blocks/reviews-stars/aeb48102-2a5a-4f39-bdbd-d8d49f4e20b8",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "product_grouping_picker_faAk9E": {
+          "type": "product_grouping_picker",
+          "settings": {
+            "heading": "Seleccion",
+            "picker_type": "button",
+            "grouping_label": "",
+            "option_type_metafield_key": "product_grouping_option_1",
+            "option_value_metafield_key": "product_grouping_option_1_value"
+          }
+        },
+        "size_chart_bF89D9": {
+          "type": "size_chart",
+          "disabled": true,
+          "settings": {
+            "size_chart": "",
+            "size_chart_title": true
+          }
+        },
+        "vitals_countdown_WFd6Cp": {
+          "type": "shopify://apps/vitals/blocks/countdown/aeb48102-2a5a-4f39-bdbd-d8d49f4e20b8",
+          "settings": {}
+        },
+        "vitals_stock_urgency_jckxBQ": {
+          "type": "shopify://apps/vitals/blocks/stock-urgency/aeb48102-2a5a-4f39-bdbd-d8d49f4e20b8",
+          "settings": {}
+        },
+        "form": {
+          "type": "form",
+          "settings": {
+            "show_gift_card_recipient_form": false
+          }
+        },
+        "vitals_payment_logos_aBn99z": {
+          "type": "shopify://apps/vitals/blocks/payment-logos/aeb48102-2a5a-4f39-bdbd-d8d49f4e20b8",
+          "settings": {}
+        },
+        "vitals_trust_CqPxpE": {
+          "type": "shopify://apps/vitals/blocks/trust/aeb48102-2a5a-4f39-bdbd-d8d49f4e20b8",
+          "settings": {}
+        },
+        "vitals_ub_bogo_RQKata": {
+          "type": "shopify://apps/vitals/blocks/ub-bogo/aeb48102-2a5a-4f39-bdbd-d8d49f4e20b8",
+          "disabled": true,
+          "settings": {}
+        },
+        "complementary_products_GnERFj": {
+          "type": "complementary_products",
+          "disabled": true,
+          "settings": {
+            "heading": "Va perfecto con",
+            "product_recommendation_limit": 1,
+            "products_per_slide": 1
+          }
+        },
+        "custom_liquid_ifif8T": {
+          "type": "custom_liquid",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "<div id='ss-tabs-icon-insert-block'></div>"
+          }
+        },
+        "description": {
+          "type": "description",
+          "disabled": true,
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "title",
+        "vitals_reviews_stars_LkNeDX",
+        "price",
+        "product_grouping_picker_faAk9E",
+        "size_chart_bF89D9",
+        "vitals_countdown_WFd6Cp",
+        "vitals_stock_urgency_jckxBQ",
+        "form",
+        "vitals_payment_logos_aBn99z",
+        "vitals_trust_CqPxpE",
+        "vitals_ub_bogo_RQKata",
+        "complementary_products_GnERFj",
+        "custom_liquid_ifif8T",
+        "description"
+      ],
+      "settings": {
+        "enable_thumbnails": "always",
+        "gallery_arrows": true,
+        "enable_product_lightbox": true,
+        "activate_zoom": false,
+        "slideshow_speed": 0,
+        "slideshow_transition": "slide",
+        "thumbnail_position": "bottom-thumbnails",
+        "crop_thumbnails": true,
+        "enable_thumbnail_slider": true,
+        "show_payment_button": true,
+        "product_images_position": "left",
+        "set_product_height": true,
+        "product_height": 600,
+        "video_looping": false,
+        "enable_swatches": true,
+        "swatches_shape": "circle",
+        "swatches_option_style": "color",
+        "swatches_product_page_size": 40
+      }
+    },
+    "custom_liquid_793gt8": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div id='ss-tabs-icon-insert-block'></div>"
+      }
+    },
+    "featured_text_QV87Ub": {
+      "type": "featured-text",
+      "disabled": true,
+      "settings": {
+        "wide_display": true,
+        "title": "{{ product.title }} - {{ product.metafields.shopify[\"color-pattern\"] | metafield_text: field: 'label' }}",
+        "content": "{{ product.description }}",
+        "text_size": "regular_text",
+        "text_alignment": "left",
+        "button_label": "",
+        "button_link": "",
+        "background_color": "rgba(0,0,0,0)"
+      }
+    },
+    "17423373513405cd06": {
+      "type": "apps",
+      "blocks": {
+        "vitals_related_products_ph3zea": {
+          "type": "shopify://apps/vitals/blocks/related-products/aeb48102-2a5a-4f39-bdbd-d8d49f4e20b8",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "vitals_related_products_ph3zea"
+      ],
+      "settings": {}
+    },
+    "testimonial_3VigQK": {
+      "type": "testimonial",
+      "blocks": {
+        "quote_T4Nfff": {
+          "type": "quote",
+          "settings": {
+            "star_rating": "5",
+            "testimonial": "<p>{{ product.metafields.custom.rese_a.value }}</p><p>-{{ product.metafields.custom.nombrerese_ador.value }}</p>",
+            "name": "",
+            "info": ""
+          }
+        }
+      },
+      "block_order": [
+        "quote_T4Nfff"
+      ],
+      "settings": {
+        "title": "",
+        "image_crop": "circle",
+        "desktop_navigation_style": "dots"
+      }
+    },
+    "ss_feature_1_M68YLa": {
+      "type": "ss-feature-1",
+      "blocks": {
+        "image_WkdiC8": {
+          "type": "image",
+          "settings": {
+            "feature_title": "Envío gratis",
+            "feature_text": "<p>El pedido sale en menos de 24hs</p>",
+            "feature_url": "shopify://pages/formas-de-envio",
+            "hide_image": false
+          }
+        },
+        "image_MCbEjr": {
+          "type": "image",
+          "settings": {
+            "feature_title": "3 cuotas sin interés",
+            "feature_text": "<p>¡Comprá ahora, pagá después!</p>",
+            "feature_url": "",
+            "hide_image": false
+          }
+        },
+        "image_7zHEXp": {
+          "type": "image",
+          "settings": {
+            "feature_title": "Cambios fáciles",
+            "feature_text": "<p>Primer cambio sin cargo, sin vueltas</p>",
+            "feature_url": "shopify://pages/cambios-y-devoluciones",
+            "hide_image": false
+          }
+        },
+        "image_WDbwjW": {
+          "type": "image",
+          "settings": {
+            "feature_title": "Calidad garantizada",
+            "feature_text": "<p><strong>Materiales premium</strong> 🏆</p>",
+            "feature_url": "",
+            "hide_image": false
+          }
+        }
+      },
+      "block_order": [
+        "image_WkdiC8",
+        "image_MCbEjr",
+        "image_7zHEXp",
+        "image_WDbwjW"
+      ],
+      "disabled": true,
+      "settings": {
+        "feature_row": 4,
+        "feature_row_mobile": 1,
+        "feature_gap": 20,
+        "feature_gap_mobile": 20,
+        "feature_padding_horizontal": 0,
+        "feature_padding_vertical": 0,
+        "feature_radius": 16,
+        "feature_border_thickness": 0,
+        "feature_shadow": false,
+        "feature_heading_custom": false,
+        "feature_heading_font": "josefin_sans_n4",
+        "feature_heading_size": 14,
+        "feature_heading_size_mobile": 12,
+        "feature_heading_height": 130,
+        "feature_heading_mt": 8,
+        "feature_text_custom": false,
+        "feature_text_font": "josefin_sans_n4",
+        "feature_text_size": 12,
+        "feature_text_size_mobile": 12,
+        "feature_text_height": 130,
+        "feature_text_mt": 4,
+        "feature_icon_size": 42,
+        "feature_icon_size_mobile": 42,
+        "feature_bg": "#ffffff",
+        "feature_border_color": "#000000",
+        "feature_shadow_color": "#000000",
+        "feature_heading_color": "#000000",
+        "feature_text_color": "#000000",
+        "feature_icon_color": "#000000",
+        "background_color": "#ffffff",
+        "background_gradient": "",
+        "border_color": "#000000",
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "padding_top": 16,
+        "padding_bottom": 16,
+        "padding_horizontal": 5,
+        "padding_horizontal_mobile": 1.5,
+        "full_width": false,
+        "content_width": 120,
+        "border_thickness": 0,
+        "lazy": true
+      }
+    },
+    "ss_tabs_block_mBYCEd": {
+      "type": "ss-tabs-block",
+      "blocks": {
+        "tab_Q3FrHe": {
+          "type": "tab",
+          "settings": {
+            "svg_color": "{{ shop.brand.colors.primary[0].background }}",
+            "icon": "globe",
+            "question": "DESCRIPCIÓN",
+            "answer": "<p>{{ product.metafields.custom.desccorta.value }}</p>{{ product.metafields.custom.caracteristicas_producto | metafield_tag }}",
+            "answer_html": ""
+          }
+        },
+        "tab_ieYLB3": {
+          "type": "tab",
+          "settings": {
+            "svg_color": "#121212",
+            "icon": "share",
+            "question": "FIT",
+            "answer": "<p><strong>{{ product.metafields.custom.corte.value.fit.value }}</strong></p><p>{{ product.metafields.custom.corte.value.descripcion.value }}</p>",
+            "answer_html": ""
+          }
+        },
+        "tab_p7Eq7k": {
+          "type": "tab",
+          "settings": {
+            "svg_color": "#121212",
+            "icon": "heart",
+            "question": "GÉNERO",
+            "answer": "<p><strong>{{ product.metafields.custom.genero.value.nombre.value }}</strong></p><p>{{ product.metafields.custom.genero.value.desc.value }}</p>{{ product.metafields.custom.genero.value.caracteristicagenero | metafield_tag: field: 'caracteristica' }}",
+            "answer_html": ""
+          }
+        },
+        "tab_MRTFye": {
+          "type": "tab",
+          "settings": {
+            "svg_color": "#121212",
+            "icon": "shield",
+            "question": "DISEÑADO PARA",
+            "answer": "{{ product.metafields.custom.utilizado_para | metafield_tag: field: 'actividad' }}",
+            "answer_html": ""
+          }
+        }
+      },
+      "block_order": [
+        "tab_Q3FrHe",
+        "tab_ieYLB3",
+        "tab_p7Eq7k",
+        "tab_MRTFye"
+      ],
+      "settings": {
+        "close_other": true,
+        "open_default": false,
+        "subtitle": "",
+        "subtitle_color": "#121212",
+        "subtitle_font_size": 10,
+        "title": "",
+        "title_font_size": 10,
+        "title_color": "#121212",
+        "arrow_size": 14,
+        "arrow_color": "#121212",
+        "icon_width": 22,
+        "text_color": "#121212",
+        "question_font_size": 13,
+        "answer_color": "#121212",
+        "answer_font_size": 12,
+        "border_color": "#f2f2f2",
+        "background-color": "#ffffff",
+        "padding_top": 12,
+        "padding_bottom": 12,
+        "padding_x_desktop": 0,
+        "padding_x": 0,
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "button_padding_y": 10
+      }
+    },
+    "recommendations": {
+      "type": "product-recommendations",
+      "disabled": true,
+      "settings": {
+        "show_product_recommendations": true,
+        "product_recommendations_layout": "slider",
+        "product_recommendations_heading": "Productos que pueden interesarte",
+        "products_per_row": 4,
+        "recommended_products_limit": 4
+      }
+    },
+    "17423376527c80bfe7": {
+      "type": "apps",
+      "blocks": {
+        "vitals_product_reviews_EAGFTM": {
+          "type": "shopify://apps/vitals/blocks/product-reviews/aeb48102-2a5a-4f39-bdbd-d8d49f4e20b8",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "vitals_product_reviews_EAGFTM"
+      ],
+      "settings": {}
+    },
+    "1742325407ecf8a2e2": {
+      "type": "apps",
+      "blocks": {
+        "vitals_recently_viewed_MMQtRn": {
+          "type": "shopify://apps/vitals/blocks/recently-viewed/aeb48102-2a5a-4f39-bdbd-d8d49f4e20b8",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "vitals_recently_viewed_MMQtRn"
+      ],
+      "settings": {}
+    },
+    "174233760075f15e7c": {
+      "type": "apps",
+      "blocks": {
+        "vitals_insta_feed_BtAJBr": {
+          "type": "shopify://apps/vitals/blocks/insta-feed/aeb48102-2a5a-4f39-bdbd-d8d49f4e20b8",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "vitals_insta_feed_BtAJBr"
+      ],
+      "settings": {}
+    }
+  },
+  "order": [
+    "sidebar",
+    "main",
+    "custom_liquid_793gt8",
+    "featured_text_QV87Ub",
+    "17423373513405cd06",
+    "testimonial_3VigQK",
+    "ss_feature_1_M68YLa",
+    "ss_tabs_block_mBYCEd",
+    "recommendations",
+    "17423376527c80bfe7",
+    "1742325407ecf8a2e2",
+    "174233760075f15e7c"
+  ]
+}

@@ -1,0 +1,117 @@
+{%- if product.metafields.custom[block.settings.option_type_metafield_key] -%}
+  {% assign related_products_metaobject = product.metafields.custom[block.settings.option_type_metafield_key].value %}
+  {% assign related_products = related_products_metaobject.product_grouping.value %}
+
+  <style>
+    .product-form__swatch-label {
+      width: 48px;
+      height: 48px;
+      background-size: 80%;
+      background-position: center;
+      background-repeat: no-repeat;
+      border: 1px solid #d2d2d2;
+      border-radius: 8px;
+      cursor: pointer;
+      display: inline-block;
+      margin: 0;
+      padding: 0;
+      transition: all 0.2s ease;
+    }
+
+    .product-form__swatch-label:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    input[type="radio"]:checked + .product-form__swatch-label {
+      border: 1px solid #000000;
+      transform: none;
+      box-shadow: none;
+    }
+
+    .product-form__swatch-label input[type="radio"] {
+      display: none;
+    }
+
+    .product-form__input--swatch {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      padding: 0;
+      border: none;
+    }
+
+    .product-form__swatch {
+      position: relative;
+    }
+
+    .product-form__swatch-input {
+      clip: rect(0, 0, 0, 0);
+      overflow: hidden;
+      position: absolute;
+      height: 1px;
+      width: 1px;
+    }
+  </style>
+
+  <div class="product-form__input">
+    <label class="form__label">{{ block.settings.grouping_label }}</label>
+
+    {%- if block.settings.picker_type == 'button' -%}
+      <fieldset class="product-form__input--swatch">
+        {% for related_product in related_products %}
+          {% assign option_value = related_product.metafields.custom[block.settings.option_value_metafield_key].value %}
+          {% assign option_disabled = true %}
+          {% if related_product.available %}
+            {% assign option_disabled = false %}
+          {% endif %}
+
+          <div class="product-form__swatch">
+            <input
+              type="radio"
+              id="related_product-{{ related_product.id }}-{{ block.id }}"
+              name="related_product_{{ block.id }}"
+              value="{{ related_product.url }}"
+              onchange="window.location.href=this.value;"
+              {% if product.handle == related_product.handle %}checked="checked"{% endif %}
+              {% if option_disabled %}disabled{% endif %}
+              class="product-form__swatch-input"
+            >
+            <label 
+              for="related_product-{{ related_product.id }}-{{ block.id }}"
+              class="product-form__swatch-label"
+              style="background-image: url('{{ related_product.featured_image | img_url: '120x120', crop: 'center' }}')"
+            >
+              <span class="visually-hidden">{{ option_value }}</span>
+            </label>
+          </div>
+        {% endfor %}
+      </fieldset>
+    {%- elsif block.settings.picker_type == 'dropdown' -%}
+      <div class="select">
+        <select
+          id="ProductSelect-related-{{ section.id }}-{{ block.id }}"
+          class="select__select"
+          onchange="window.location.href=this.value;"
+        >
+          {% for related_product in related_products %}
+            {% assign option_value = related_product.metafields.custom[block.settings.option_value_metafield_key].value %}
+            <option
+              value="{{ related_product.url }}"
+              {% if product.handle == related_product.handle %}selected="selected"{% endif %}
+              {% unless related_product.available %}disabled{% endunless %}
+            >
+              {{ option_value }}
+              {% unless related_product.available %} - {{ 'products.product.sold_out' | t }}{% endunless %}
+            </option>
+          {% endfor %}
+        </select>
+        {% render 'icon-caret' %}
+      </div>
+    {%- endif -%}
+  </div>
+
+  {% if product.has_only_default_variant %}
+    {{ 'component-product-variant-picker.css' | asset_url | stylesheet_tag }}
+  {% endif %}
+{%- endif -%}

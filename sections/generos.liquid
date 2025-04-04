@@ -1,0 +1,248 @@
+{% schema %}
+{
+  "name": "Géneros",
+  "settings": [
+    {
+      "type": "text",
+      "id": "titulo",
+      "label": "Título de la sección",
+      "default": "Nuestros Géneros"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "material",
+      "name": "Material",
+      "settings": [
+        {
+          "type": "text",
+          "id": "material_nombre",
+          "label": "Nombre del Material",
+          "default": "Ejemplo de Tela"
+        },
+        {
+          "type": "text",
+          "id": "material_descripcion",
+          "label": "Descripción",
+          "default": "Descripción breve"
+        },
+        {
+          "type": "text",
+          "id": "material_composicion",
+          "label": "Composición",
+          "default": "Algodón 100%"
+        },
+        {
+          "type": "text",
+          "id": "material_utilizado_para",
+          "label": "Utilizado para",
+          "default": "Running, Entrenamiento"
+        },
+        {
+          "type": "image_picker",
+          "id": "material_imagen",
+          "label": "Imagen"
+        },
+        {
+          "type": "text",
+          "id": "material_caracteristicas",
+          "label": "Características (separadas por comas)",
+          "default": "Ligero, Secado rápido, Elástico"
+        },
+        {
+          "type": "url",
+          "id": "material_link",
+          "label": "Enlace a productos"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Géneros",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}
+
+<div class="generos-container">
+  <h1>{{ section.settings.titulo }}</h1>
+  <div class="generos-grid">
+    {% for block in section.blocks %}
+      <div class="genero">
+        <div class="genero-contenido">
+          <div class="genero-imagen">
+            <img src="{{ block.settings.material_imagen | img_url: 'large' }}" alt="{{ block.settings.material_nombre }}">
+          </div>
+          <div class="genero-texto">
+            <h2>{{ block.settings.material_nombre }}</h2>
+            <p>{{ block.settings.material_descripcion }}</p>
+            <div class="genero-detalles">
+              <div class="columna">
+                <p><strong>Composición:</strong> {{ block.settings.material_composicion }}</p>
+                <p><strong>Utilizado para:</strong> {{ block.settings.material_utilizado_para }}</p>
+              </div>
+              <div class="columna">
+                {% assign caracteristicas_str = block.settings.material_caracteristicas | replace: " y ", ", " %}
+                {% assign caracteristicas = caracteristicas_str | split: "," %}
+                <ul>
+                  {% for caracteristica in caracteristicas %}
+                    <li>✔️ {{ caracteristica | strip }}</li>
+                  {% endfor %}
+                </ul>
+              </div>
+            </div>
+            {% if block.settings.material_link != blank %}
+              <a href="{{ block.settings.material_link }}" class="genero-boton">Ver productos</a>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+<style>
+  .generos-container {
+    text-align: center;
+    padding: 40px;
+  }
+  
+  .generos-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+  }
+  
+  .genero {
+    width: 90%;
+    max-width: 900px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    background: #f9f9f9;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
+  }
+
+  .genero:hover {
+    box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.15);
+  }
+  
+  .genero-contenido {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    text-align: left;
+  }
+  
+  .genero-imagen {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .genero-imagen img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  .genero-texto {
+    flex: 2;
+  }
+  
+  .genero-detalles {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  
+  .columna {
+    width: 50%;
+  }
+  
+  .columna p {
+    margin: 0 0 10px 0;
+  }
+  
+  .columna ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  .genero-boton {
+    display: block;
+    width: fit-content;
+    margin: 20px auto 0 auto;
+    padding: 8px 16px;
+    background: #444;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: light;
+    text-align: center;
+  }
+  
+  .genero-boton:hover {
+    background: #222;
+  }
+  
+  .genero-boton:visited {
+    color: white;
+  }
+  
+  @media (max-width: 768px) {
+    .generos-container {
+      width: 100%;
+      padding: 20px 0; /* Reducir el padding vertical */
+    }
+    
+    .generos-grid {
+      width: 100%;
+      padding: 0;
+      margin: 0;
+    }
+    
+    .genero {
+      width: 100%;
+      border-radius: 0;
+      padding: 15px; /* Reducir el padding en móviles */
+      box-shadow: none; /* Eliminar sombra en móviles para mejor rendimiento */
+    }
+    
+    .genero-contenido {
+      flex-direction: column;
+      text-align: center;
+      gap: 15px; /* Reducir el espacio entre elementos */
+    }
+    
+    .genero-texto {
+      width: 100%;
+      padding: 0 15px; /* Añadir márgenes a los textos */
+    }
+    
+    .genero-detalles {
+      flex-direction: column;
+      gap: 10px;
+      padding: 0 15px; /* Añadir márgenes a los detalles */
+    }
+    
+    .columna {
+      width: 100%;
+      text-align: left;
+    }
+    
+    .columna p, .columna ul {
+      padding: 0 10px; /* Añadir márgenes internos a los textos */
+    }
+    
+    .genero-boton {
+      width: 90%; /* Hacer el botón más ancho en móviles */
+      margin: 20px auto 0 auto;
+    }
+  }
+</style>

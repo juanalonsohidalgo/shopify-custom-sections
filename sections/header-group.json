@@ -1,0 +1,51 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "type": "header",
+  "name": "Header",
+  "sections": {
+    "header": {
+      "type": "header",
+      "settings": {
+        "logo_alignment": "left",
+        "fixed_header": true,
+        "transparent_header": "home",
+        "show_border": false,
+        "border_opacity": 20,
+        "show_locale_selector": false,
+        "show_currency_selector": false,
+        "show_announcement": false,
+        "home_page_only": false,
+        "announcement_text": "Announcement message",
+        "announcement_link": "",
+        "promo_bg_color": "#f9f7f2",
+        "promo_text_color": "#000000",
+        "logo": "shopify://shop_images/LogoWebNegro.png",
+        "logo_home": "shopify://shop_images/LogoWebBlanco.png",
+        "logo_width": 100,
+        "mobile_logo_width": 80,
+        "main_linklist": "main-menu",
+        "search_enabled": false,
+        "social_icons_enabled": false
+      }
+    },
+    "c78e64dd-1493-4faf-947e-7fa9bc53d4a4": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "settings": {
+        "custom_liquid": ""
+      }
+    }
+  },
+  "order": [
+    "header",
+    "c78e64dd-1493-4faf-947e-7fa9bc53d4a4"
+  ]
+}

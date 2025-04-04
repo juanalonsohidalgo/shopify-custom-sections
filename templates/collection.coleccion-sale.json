@@ -1,0 +1,37 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "collection-template",
+      "blocks": {
+        "block-1": {
+          "type": "filter",
+          "settings": {
+            "show_filter_product_count": true
+          }
+        }
+      },
+      "block_order": [
+        "block-1"
+      ],
+      "settings": {
+        "products_per_row": 3,
+        "pagination_limit": 24,
+        "collection_sort": true,
+        "toggle": false,
+        "sidebar_mobile_position": "below"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

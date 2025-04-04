@@ -1,0 +1,76 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "contact-template",
+      "disabled": true,
+      "settings": {
+        "wide_display": false,
+        "banner_height": "original",
+        "contact_heading": "Contacto",
+        "contact_content": "<p>Comunicate con nosotros por teléfono, e-mail, redes sociales o completando el siguiente formulario por cualquier consulta. Dentro de las 24 hs. nos estaremos comunicando con vos.</p><p>O visitanos en nuestro showroom en Los Crisantemos 392, B1669 Del Viso, Provincia de Buenos Aires. Oficina 223.<br/><br/>Focus | </p><p>WP + 54 11 2878 3921<br/>IG <a href=\"https://www.instagram.com/focus.lifestyle_/\" title=\"https://www.instagram.com/focus.ar_/\">@focus.ar_</a><br/>info@focusarg.com</p><p>Juan Manuel Alonso Hidalgo</p>",
+        "banner_text_position": "center",
+        "overlay_opacity": 0,
+        "overlay_color": "rgba(0,0,0,0)",
+        "overlay_text_color": "#FFFFFF",
+        "map_address": "",
+        "store_hours": true,
+        "title": "Come and visit",
+        "address": "<p>123 Fake Street</p><p>Toronto, Canada</p>",
+        "hours": "<p>Mon - Fri, 10am - 9pm</p><p>Saturday, 11am - 9pm</p><p>Sunday, 11am - 5pm</p>",
+        "section_height": "small",
+        "text_alignment": "left",
+        "text_position": "top-left",
+        "mobile_text_position": "below-map",
+        "zoom_level": 12,
+        "api_key": "",
+        "show_pin": true,
+        "button_label": "Directions",
+        "map_style": "default"
+      }
+    },
+    "fa4cc16b-0ca9-4fa5-bb01-37f40bfcf6b1": {
+      "type": "contact-form",
+      "settings": {
+        "contact_heading": "Contacto",
+        "contact_subheading": "",
+        "contact_content": "<p>Por ventas mayoristas o cualquier duda que tengas comunicate con nosotros por teléfono, e-mail, redes sociales o completando el siguiente formulario por cualquier consulta. Dentro de las 24 hs. nos estaremos comunicando con vos.</p><p>O visitanos en nuestro showroom en Los Crisantemos 392, B1669 Del Viso, Provincia de Buenos Aires. Oficina 223.<br/><br/>Focus | </p><p>WP + 54 11 2878 3921<br/>IG <a href=\"https://www.instagram.com/focus.lifestyle_/\" title=\"https://www.instagram.com/focus.ar_/\">@focus.ar_</a><br/>info@focusarg.com</p><p>Juan Manuel Alonso Hidalgo</p>",
+        "contact_text_position": "center",
+        "contact_text_alignment": "left"
+      }
+    },
+    "f7e33500-3fd7-43fb-aeea-aa59ad1cab6d": {
+      "type": "map",
+      "settings": {
+        "map_address": "Los Crisantemos 392, B1669 Del Viso, Provincia de Buenos Aires",
+        "store_hours": true,
+        "title": "Showroom",
+        "address": "<p>Los Crisantemos 392, Del Viso, Provincia de Buenos Aires</p><p>Piso 2 Oficina 223</p>",
+        "hours": "<p>Lunes - viernes, 10am - 6pm</p>",
+        "wide_display": true,
+        "section_height": "small",
+        "text_alignment": "left",
+        "text_position": "bottom-right",
+        "mobile_text_position": "above-map",
+        "zoom_level": 12,
+        "api_key": "",
+        "show_pin": false,
+        "button_label": "Directions",
+        "map_style": "default"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "fa4cc16b-0ca9-4fa5-bb01-37f40bfcf6b1",
+    "f7e33500-3fd7-43fb-aeea-aa59ad1cab6d"
+  ]
+}
