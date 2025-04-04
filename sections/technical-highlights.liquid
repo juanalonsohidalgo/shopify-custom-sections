@@ -40,7 +40,7 @@
       <div class="technical-highlights__item" {{ block.shopify_attributes }}>
         <div class="technical-highlights__icon">
           {%- if block.settings.icon != blank -%}
-            {{ block.settings.icon | image_url: width: 120 | image_tag:
+            {{ block.settings.icon | image_url: width: 60 | image_tag:
               loading: 'lazy',
               width: 60,
               height: 60
