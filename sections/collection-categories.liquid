@@ -1,0 +1,366 @@
+{{ 'section-collection-categories.css' | asset_url | stylesheet_tag }}
+
+<div class="collection-categories">
+  {%- if section.settings.title != blank or section.settings.subtitle != blank -%}
+    <div class="collection-categories__header">
+      <div class="collection-categories__heading-wrapper">
+        <h2 class="collection-categories__heading"{% if section.settings.text_align != blank %} style="text-align: {{ section.settings.text_align }};"{% endif %}>{{ section.settings.title }}</h2>
+        {%- if section.settings.subtitle != blank -%}
+          <p class="collection-categories__subheading"{% if section.settings.text_align != blank %} style="text-align: {{ section.settings.text_align }};"{% endif %}>{{ section.settings.subtitle }}</p>
+        {%- endif -%}
+      </div>
+    </div>
+  {%- endif -%}
+  <div class="collection-categories__grid">
+    {% for block in section.blocks %}
+      <div class="collection-categories__item collection-categories__item--{{ block.id }}" {{ block.shopify_attributes }}>
+        <a href="{{ block.settings.collection.url }}" class="collection-categories__link{% if block.settings.hover_effect != 'none' %} hover-{{ block.settings.hover_effect }}{% endif %}">
+          <div class="collection-categories__image-wrapper">
+            {%- if block.settings.image != blank -%}
+              {{ block.settings.image | image_url: width: 800 | image_tag:
+                loading: 'lazy',
+                width: 800,
+                height: 1422,
+                class: 'collection-categories__image'
+              }}
+            {%- elsif block.settings.collection.image != blank -%}
+              {{ block.settings.collection.image | image_url: width: 800 | image_tag:
+                loading: 'lazy',
+                width: 800,
+                height: 1422,
+                class: 'collection-categories__image'
+              }}
+            {%- elsif block.settings.collection.featured_image != blank -%}
+              {{ block.settings.collection.featured_image | image_url: width: 800 | image_tag:
+                loading: 'lazy',
+                width: 800,
+                height: 1422,
+                class: 'collection-categories__image'
+              }}
+            {%- else -%}
+              {{ 'collection-1' | placeholder_svg_tag: 'collection-categories__image placeholder' }}
+            {%- endif -%}
+          </div>
+          <div class="collection-categories__content collection-categories__content--{{ block.settings.title_position }}">
+            <h2 class="collection-categories__title">{{ block.settings.title }}</h2>
+            <p class="collection-categories__subtitle">{{ block.settings.subtitle }}</p>
+          </div>
+        </a>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Collection Categories",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Section Header"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Shop by Category"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtitle",
+      "default": "Discover our collections"
+    },
+    {
+      "type": "select",
+      "id": "text_align",
+      "label": "Text alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "select",
+      "id": "title_size",
+      "label": "Title size",
+      "options": [
+        {
+          "value": "small",
+          "label": "Small"
+        },
+        {
+          "value": "medium",
+          "label": "Medium"
+        },
+        {
+          "value": "large",
+          "label": "Large"
+        }
+      ],
+      "default": "medium"
+    },
+    {
+      "type": "select",
+      "id": "title_style",
+      "label": "Title style",
+      "options": [
+        {
+          "value": "normal",
+          "label": "Normal"
+        },
+        {
+          "value": "uppercase",
+          "label": "Uppercase"
+        },
+        {
+          "value": "bold",
+          "label": "Bold"
+        },
+        {
+          "value": "bold_uppercase",
+          "label": "Bold Uppercase"
+        }
+      ],
+      "default": "uppercase"
+    },
+    {
+      "type": "header",
+      "content": "Collection Card Settings"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_text_shadow",
+      "label": "Enable text shadow",
+      "default": true,
+      "info": "Adds a subtle shadow to collection titles and descriptions"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "category",
+      "name": "Category",
+      "limit": 3,
+      "settings": [
+        {
+          "type": "header",
+          "content": "Content"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Custom Image"
+        },
+        {
+          "type": "collection",
+          "id": "collection",
+          "label": "Collection"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "RUN"
+        },
+        {
+          "type": "text",
+          "id": "subtitle",
+          "label": "Subtitle",
+          "default": "Performance apparel for runners"
+        },
+        {
+          "type": "header",
+          "content": "Title Style"
+        },
+        {
+          "type": "select",
+          "id": "title_position",
+          "label": "Title Position",
+          "options": [
+            {
+              "value": "center",
+              "label": "Center"
+            },
+            {
+              "value": "top",
+              "label": "Top"
+            },
+            {
+              "value": "bottom",
+              "label": "Bottom"
+            }
+          ],
+          "default": "center"
+        },
+        {
+          "type": "color",
+          "id": "title_color",
+          "label": "Title Color",
+          "default": "#ffffff"
+        },
+        {
+          "type": "range",
+          "id": "title_size",
+          "min": 24,
+          "max": 60,
+          "step": 2,
+          "unit": "px",
+          "label": "Title Size",
+          "default": 48
+        },
+        {
+          "type": "header",
+          "content": "Subtitle Style"
+        },
+        {
+          "type": "color",
+          "id": "subtitle_color",
+          "label": "Subtitle Color",
+          "default": "#ffffff"
+        },
+        {
+          "type": "range",
+          "id": "subtitle_size",
+          "min": 12,
+          "max": 24,
+          "step": 1,
+          "unit": "px",
+          "label": "Subtitle Size",
+          "default": 16
+        },
+        {
+          "type": "header",
+          "content": "Effects"
+        },
+        {
+          "type": "select",
+          "id": "hover_effect",
+          "label": "Hover Effect",
+          "options": [
+            {
+              "value": "zoom",
+              "label": "Zoom"
+            },
+            {
+              "value": "darken",
+              "label": "Darken"
+            },
+            {
+              "value": "none",
+              "label": "None"
+            }
+          ],
+          "default": "zoom"
+        },
+        {
+          "type": "range",
+          "id": "overlay_opacity",
+          "min": 0,
+          "max": 100,
+          "step": 10,
+          "unit": "%",
+          "label": "Overlay Opacity",
+          "default": 40
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Collection Categories",
+      "blocks": [
+        {
+          "type": "category",
+          "settings": {
+            "title": "RUN",
+            "subtitle": "Performance apparel for runners"
+          }
+        },
+        {
+          "type": "category",
+          "settings": {
+            "title": "TRAIN",
+            "subtitle": "Durable training apparel with advanced fabric technologies"
+          }
+        },
+        {
+          "type": "category",
+          "settings": {
+            "title": "REC",
+            "subtitle": "Comfortable everyday wear"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
+
+{% style %}
+.collection-categories__heading {
+  {% case section.settings.title_size %}
+    {% when 'small' %}
+      font-size: 1.25rem;
+    {% when 'large' %}
+      font-size: 2rem;
+    {% else %}
+      font-size: 1.5rem;
+  {% endcase %}
+
+  {% case section.settings.title_style %}
+    {% when 'normal' %}
+      text-transform: none;
+      font-weight: normal;
+    {% when 'uppercase' %}
+      text-transform: uppercase;
+      font-weight: normal;
+    {% when 'bold' %}
+      text-transform: none;
+      font-weight: bold;
+    {% when 'bold_uppercase' %}
+      text-transform: uppercase;
+      font-weight: bold;
+  {% endcase %}
+}
+
+{% if section.settings.enable_text_shadow %}
+.collection-categories__title,
+.collection-categories__subtitle {
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
+}
+{% endif %}
+
+{% for block in section.blocks %}
+  .collection-categories__item--{{ block.id }} {
+    position: relative;
+  }
+
+  .collection-categories__item--{{ block.id }} .collection-categories__content {
+    background: linear-gradient(to bottom, 
+      rgba(0,0,0,{{ block.settings.overlay_opacity | divided_by: 100.0 }}) 0%, 
+      rgba(0,0,0,{{ block.settings.overlay_opacity | plus: 20 | divided_by: 100.0 }}) 100%
+    );
+  }
+
+  .collection-categories__item--{{ block.id }} .collection-categories__title {
+    color: {{ block.settings.title_color }};
+    font-size: {{ block.settings.title_size }}px;
+  }
+  
+  .collection-categories__item--{{ block.id }} .collection-categories__subtitle {
+    color: {{ block.settings.subtitle_color }};
+    font-size: {{ block.settings.subtitle_size }}px;
+  }
+{% endfor %}
+{% endstyle %} 
