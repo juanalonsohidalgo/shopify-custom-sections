@@ -55,6 +55,62 @@ Los siguientes elementos son personalizables:
 
 ---
 
+## Hero Banner Section
+
+Una potente sección de banner principal con múltiples opciones de personalización para crear impactantes héroes visuales.
+
+### Características
+
+- **Posicionamiento Flexible**: 
+  - Control de posición vertical (arriba, centro, abajo)
+  - Control de posición horizontal (izquierda, centro, derecha)
+  - Alineación de texto personalizable
+- **Personalización Visual Completa**:
+  - Tamaño, color y sombra para títulos y subtítulos
+  - Múltiples estilos de botón (sólido, contorno, transparente)
+  - Control de opacidad para contenido y overlay
+- **Soporte para Media**:
+  - Imágenes de fondo de alta resolución
+  - Videos de YouTube y Vimeo
+  - Integración de logo con separador vertical
+- **Diseño Responsive**:
+  - Optimizado para todos los dispositivos
+  - Ajuste automático de tamaños y espaciados
+
+### Uso
+
+1. Agregar la sección a tu tema:
+   ```liquid
+   {% section 'hero-banner' %}
+   ```
+
+2. Configurar en el customizer de Shopify:
+   - Fondo (imagen o video)
+   - Posición y alineación del contenido
+   - Textos, colores y estilos
+   - Opciones de botón
+
+### Estructura de Archivos
+
+- `sections/hero-banner.liquid`: Template principal
+- `assets/section-hero-banner.css`: Estilos de la sección
+
+### Personalización
+
+Opciones de personalización incluyen:
+- Colores de texto, botones y overlay
+- Tamaños de fuente para encabezados
+- Efectos de sombra para mejor legibilidad
+- Estilos de botón
+- Ancho del área de contenido
+- Opacidad de elementos
+
+### Preview
+
+[Vista previa de la sección Hero Banner]
+
+---
+
 ## Contribuciones
 
 Las contribuciones son bienvenidas. Por favor, abre un issue primero para discutir los cambios que te gustaría hacer.
